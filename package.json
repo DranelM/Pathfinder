@@ -2,7 +2,7 @@
   "name": "pathfinder",
   "version": "1.0.0",
   "description": "A simple pathfinding visualization in form of a board, two startig points and optionall walls to make it more difficult for the algorythm.",
-  "main": "board.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
