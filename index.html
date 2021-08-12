@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shojumaru&display=swap"
+      rel="stylesheet"
+    />
     <title>Pathfinder</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="app">
+      <div class="wrapper">
+        <div class="controlPanel">
+          <label class="radio">
+            <span class="radio__input">
+              <input type="radio" name="cellTypeRadio" value="A" checked />
+              <span class="radio__control">Point A</span>
+            </span>
+          </label>
 
-    <button class='changeSize'>Change size</button><input name="size" type="text" placeholder="size"><br>
-    <button class='start'>Start</button>
-    <button class='restart' style='display: none;'>Restart</button>
-    <div class="board"></div>
+          <label class="radio">
+            <span class="radio__input">
+              <input type="radio" name="cellTypeRadio" value="B" />
+              <span class="radio__control">Point B</span>
+            </span>
+          </label>
 
-    <div>
-        <input type="radio" id="A" name="cellTypeRadio" value="A">
-        <label for="A">pointA</label>
+          <label class="radio">
+            <span class="radio__input">
+              <input type="radio" name="cellTypeRadio" value="WALL" />
+              <span class="radio__control">Wall</span>
+            </span>
+          </label>
+        </div>
 
-        <input type="radio" id="B" name="cellTypeRadio" value="B">
-        <label for="B">pointB</label>
+        <div class="board"></div>
 
-        <input type="radio" id="WALL" name="cellTypeRadio" value="WALL">
-        <label for="WALL">wall</label>
+        <button class="start">Start</button>
+
+        <!-- <div class="sizeChanger">
+          <input name="size" type="text" placeholder="size" />
+          <button class="changeSize">Change size</button>
+        </div> -->
+        <button class="restart" style="display: none">Restart</button>
+      </div>
     </div>
-
 
     <script src="pathfinding.js"></script>
     <script src="board.js"></script>
-</body>
-
+  </body>
 </html>

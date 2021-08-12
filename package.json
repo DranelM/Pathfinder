@@ -1,0 +1,19 @@
+{
+  "name": "pathfinder",
+  "version": "1.0.0",
+  "description": "A simple pathfinding visualization in form of a board, two startig points and optionall walls to make it more difficult for the algorythm.",
+  "main": "board.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DranelM/Pathfinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DranelM/Pathfinder/issues"
+  },
+  "homepage": "https://github.com/DranelM/Pathfinder#readme"
+}

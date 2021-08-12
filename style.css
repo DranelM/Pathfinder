@@ -1,42 +1,172 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-width: 50px;
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Shojumaru";
+  background-color: hsl(0, 47%, 40%);
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  /* width: calc(var(--cell-width) * 10); */
 }
 
 .board {
-    display : flex;
+  display: flex;
+  background-color: hsl(0, 47%, 20%);
+  border-radius: 5px;
+
+  /* background-color: ; */
 }
 
-.cell {
-    border: ridge;
-    width: 50px;
-    height: 50px;
-    }
+.sizeChanger {
+  display: flex;
+  flex-flow: row;
+}
 
+.cell.cell {
+  border: 1px solid #ccc;
+  width: var(--cell-width);
+  height: var(--cell-width);
+  border-radius: 5px;
+  transition: background 0.3s ease-in;
+}
 
 .EMPTY {
-    border-radius: 0%;
+  border-radius: 0%;
 }
 
 .A {
-    background-color: red;
+  background-color: #ff4242;
 }
 
 .B {
-    background-color: blue;
+  background-color: #3f3fcc;
 }
-
 
 .WALL {
-    background-color: grey;
+  background-color: grey;
 }
 
-.path {
-    background-color: black;
+.path.path {
+  background-color: hsl(0deg 47% 30%);
+
+  /* background-color: hsl(39, 100%, 20%); */
+  border-radius: 50%;
 }
 
-.solvedAB {
-    background-color: black;
-    border: solid;
-    border-radius: 50%;
-    border-color: darkorange;
+.solvedAB.solvedAB {
+  background-color: hsl(0deg 47% 60%);
+
+  /* background-color: hsl(39, 100%, 50%); */
+  border-radius: 50%;
+}
+
+.controlPanel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2em;
+  border-radius: 5px;
+}
+
+.radio__control {
+  position: absolute;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 10.3em;
+  height: 1.9em;
+  border-radius: 5px;
+  background-color: hsl(0deg 47% 30%);
+  box-shadow: 0 2px hsl(0deg 47% 24%);
+}
+
+.radio__input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio__input {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 0.8em;
+}
+
+.radio__label {
+  display: absolute;
+  z-index: 10;
+  transform: translateX(-0.3em);
+}
+
+.radio {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.radio__input input:checked + .radio__control {
+  background-color: hsl(0deg 47% 60%);
+  box-shadow: 0 2px hsl(0deg 47% 54%);
+}
+
+.start,
+.restart {
+  font-size: inherit;
+  font-family: inherit;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  color: inherit;
+}
+
+.start {
+  background-color: hsl(0deg 47% 30%);
+  box-shadow: 0 2px hsl(0deg 47% 24%);
+}
+
+.restart {
+  background-color: hsl(0deg 47% 60%);
+  box-shadow: 0 2px hsl(0deg 47% 54%);
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --cell-width: 30px;
+  }
+
+  .app {
+    font-size: 15px;
+  }
+
+  .radio__control {
+    width: 6.6em;
+    height: 1.9em;
+  }
 }
