@@ -21,6 +21,16 @@
   color: white;
 }
 
+.samuraj {
+  display: flex;
+  flex-flow: column;
+  font-size: 40px;
+  margin-bottom: 3%;
+  background-color: hsl(0, 47%, 20%);
+  border-radius: 5px;
+  padding: 0 1%;
+}
+
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -156,6 +166,12 @@
   box-shadow: 0 2px hsl(0deg 47% 54%);
 }
 
+@media screen and (max-width: 690px) {
+  .samuraj {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   :root {
     --cell-width: 30px;
@@ -168,5 +184,15 @@
   .radio__control {
     width: 6.6em;
     height: 1.9em;
+  }
+
+  .samuraj {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .samuraj {
+    font-size: 18px;
   }
 }
