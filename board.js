@@ -65,6 +65,12 @@ class Board {
           ) {
             console.log("Can't make wall from point A or B");
             return;
+          } else if (
+            this.boardMatrix[r_idx][c_idx] === this.CELLTYPES["WALL"]
+          ) {
+            this.boardMatrix[r_idx][c_idx] = this.CELLTYPES["EMPTY"];
+            this.redrawBoard();
+            return;
           }
         }
 
