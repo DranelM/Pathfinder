@@ -1,7 +1,6 @@
-To run it, just clone it to your machine and open index.html in your browser.
-`./index.html`
-
 # Pathfinding with Dijkstra algorythm
+
+<img src='./src/assets/pathfinder.png' alt="Pathfinder" width="800">
 
 ## 1. Description
 
